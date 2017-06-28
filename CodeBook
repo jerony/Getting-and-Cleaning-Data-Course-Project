@@ -1,0 +1,13 @@
+As explanation of the summary statistics listed in the "features" file provided by Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto and 
+Davide Anguita in their "features info" and "README" text, each window produced 128 readings on the sensor signals. Each window then 
+produced the 151 summary statistics described in the "features info" file. Each subject/activity combination has many windows associated 
+with it. The goal of this project was to condense each of these combinations into one record, where each record has the average summary
+statistic of that combination. There are 17 signals that we needed to summarize with the statistical measures listed in the "features info" 
+file. Of those 17, 8 spanned across three dimensions, so there are 33 signals that need to be summarized. Since we only care about the mean
+and standard deviation measurements for this project, we must have 66, (33 X 2), variables in our final data set, (excluding the variables 
+identifying the activity and subject). So, for example, subject 1 has 51 windows associated with the "Sitting" reading; each window produces
+its' own set of summary statistics, so there are 51 values describing the average of the fbodyAcc Magnitude variable, (one for each window).
+Those 51 windows are condensed into one vector, where each element in the vector represents the average summary statistic across each 
+window associated with that paritcular combination. Since this produces one row for each subject/activity combination, (and since there are 
+30 participants and 6 activities), the dimmensions of the final table is 180 X 68. The units of these average summary statistics are of
+course identical the units of the original variables spelled out in the "features info" file. 
